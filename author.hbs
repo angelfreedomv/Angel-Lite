@@ -1,0 +1,26 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The main content area on the homepage }}
+
+{{> header}}
+
+<main id="main" class="content cd-main-content" role="main">
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{#author}}
+    <div class="cd-fixed-bg cd-bg-1" {{#if cover}} style="background-image: url({{cover}})" {{else}} style="background: #52B3D9"{{/if}}>
+        {{#if image}}
+            <h1><img src="{{image}}" alt="Author"></h1>
+        {{/if}}
+		<h1 itemprop="author" itemscope itemtype="http://schema.org/Person">{{name}}</h1>
+	</div>
+	{{/author}}
+	
+	<div class="cd-scrolling-bg cd-color-2">
+		<div class="cd-container">
+            {{> "loop"}}
+        </div>
+    </div>
+
+</main>

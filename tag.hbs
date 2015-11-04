@@ -1,0 +1,23 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The main content area on the homepage }}
+
+{{> header}}
+
+<main id="main" class="content cd-main-content" role="main">
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    <div class="cd-fixed-bg cd-bg-1" {{#if @blog.cover}} style="background-image: url({{@blog.cover}})" {{else}} style="background: #52B3D9"{{/if}}>
+        <h1 itemprop="name headline">
+            {{tag.name}}
+        </h1>
+	</div>
+	
+	<div class="cd-scrolling-bg cd-color-2">
+		<div class="cd-container">
+            {{> "loop"}}
+        </div>
+    </div>
+
+</main>

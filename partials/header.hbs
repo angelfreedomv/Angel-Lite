@@ -1,0 +1,58 @@
+<header class="cd-header">
+	<div id="cd-logo">
+	    {{#if @blog.logo}}
+	    
+	    <a href="{{@blog.url}}" itemprop="url">
+	        <img src="{{@blog.logo}}" alt="{{@blog.title}}">
+        </a>
+        
+    	{{else}}
+    	
+    	<a href="{{@blog.url}}" itemprop"url">
+    		<h1>{{@blog.title}}</h1>
+    	</a>
+        
+        {{/if}}
+    </div>
+    
+    <nav class="cd-main-nav">
+		<ul>
+			<!-- inser more links here -->
+			<li class="weibo">
+			    <a href="http://weibo.com/2092860157">   //请修改为自己的url
+			        <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                    </span>
+			    </a>
+		    </li>
+		    
+		    <li class="twitter">
+			    <a href="https://twitter.com/moonlikesd">
+			        <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+			    </a>
+		    </li>
+		    
+		    <li class="googleplus">
+			    <a href="https://plus.google.com/u/1/113126898607169220997">
+			        <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                    </span>
+			    </a>
+		    </li>
+		   
+		   <li class="rss">
+			    <a href="http://node.freedom.moe/rss/">
+			        <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                    </span>
+			    </a>
+		    </li>
+		</ul>
+	</nav>
+</header>

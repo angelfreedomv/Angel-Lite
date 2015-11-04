@@ -1,0 +1,42 @@
+
+
+{{! This is the post loop - each post will be output using this markup }}
+
+<div class="wrapper">
+    <article class="{{post_class}} list" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        {{#foreach posts}}
+        <section class="item">
+            <header class="post-header">
+                {{#if image}}
+                    <div class="effect">
+                        <img src="{{image}}" alt="{{image}}">
+                    </div>
+                {{else}}
+                    {{content words="0"}}
+                {{/if}}
+                <h2 itemprop="name headline" class="post-title"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
+            </header>
+            
+            <p class="postContent">{{excerpt words="20"}}</p>
+            
+            <footer class="post-meta">
+                {{#if author.image}}
+                    <img itemprop="author" itemscope itemtype="http://schema.org/Person" class="author-thumb" src="{{author.image}}" alt="Author Image">{{/if}}
+                {{author}}
+                
+                {{#if tags}}
+                <span class="tags"><i class="fa fa-tags"></i>
+                    <span itemprop="keywords">
+                        {{tags prefix="" separator=", "}}
+                    </span>
+                </span>
+                {{/if}}
+            </footer>
+        </section>
+        {{/foreach}}
+    </article>
+</div>
+
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

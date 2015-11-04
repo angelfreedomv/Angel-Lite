@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{! Document Settings }}
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+        {{! Page Meta }}
+        <title>{{meta_title}} | {{meta_description}}</title>
+        <meta itemprop="description" name="description" content="{{meta_description}}" />
+    
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    
+        {{! Styles'n'Scripts }}
+        <link rel="stylesheet" href="{{asset "css/animate.css"}}">
+        <link rel="stylesheet" href="{{asset "css/github.css"}}">
+        <link rel="stylesheet" href="{{asset "css/normalize.css"}}">
+        <link rel="stylesheet" href="{{asset "css/main.css"}}" />
+        <link rel="stylesheet" href="{{asset "css/wstyle.css"}}" />
+        <link href='http://fonts.useso.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="{{asset "js/modernizr.js"}}"></script>
+        
+        <!--[if lt IE 9]>
+            <script src="http://frdom.qiniudn.com/cdn/html5.js"></script>  //这是我的CDN，建议更换，滥用流量的话不然我就删除
+            <script src="http://frdom.qiniudn.com/cdn/selectivizr-min.js"></script>
+        <![endif]-->
+        
+        {{! Ghost outputs important style and meta data with this tag }}
+        {{ghost_head}}
+    </head>
+    
+    <body itemscope itemtype="http://schema.org/Blog" class="{{body_class}}">
+    
+        {{! Everything else gets inserted here }}
+        
+        {{> menu}}   //按钮弹出式菜单
+
+        {{> menu2}} //右侧弹出菜单
+               
+        {{{body}}}
+    
+        {{! Ghost outputs important scripts and data with this tag }}     
+ 
+        {{ghost_foot}}
+             
+        {{! The main JavaScript file for Kular }}
+        <script src="{{asset "js/highlight.js"}}"></script>
+        <script src="{{asset "js/jquery.fitvids.js"}}"></script>
+        <script src="{{asset "js/infinitescroll.js"}}"></script>
+        <script src="{{asset "js/imagesloaded.js"}}"></script>
+        <script src="{{asset "js/masonry.js"}}"></script>
+        <script src="{{asset "js/main.js"}}"></script>
+        <script src="{{asset "js/wjquery-2.0.3.min.js"}}"></script>
+         <script type="text/javascript">
+$(document).ready(function(){
+
+	$(".side ul li").hover(function(){
+		$(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#1d81f2"})	
+	},function(){
+		$(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#000"})	
+	});
+	
+});
+
+//回到顶部
+function goTop(){
+	$('html,body').animate({'scrollTop':0},600);
+}
+</script>
+        <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'angelbeat'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    </body>
+</html>

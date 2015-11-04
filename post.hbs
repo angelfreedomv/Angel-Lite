@@ -1,0 +1,98 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<div class="postImage" style="background-image: url({{image}})"></div>
+
+<main class="content animated fadeInUp" role="main">
+
+    <article class="{{post_class}} post-wrapper">
+        
+        <header class="postHeader">
+            <h1 class="post-title">{{title}}</h1>
+            <section class="postMeta">
+                <i class="fa fa-clock-o"></i> <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+            </section>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+            
+            var disqus_identifier = 'ghost-{{id}}';
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'angelbeat'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
+        
+        <section class="share wow fadeInRight">
+            <span>Share</span>
+            <a class="twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <a class="weibo" href="http://service.weibo.com/share/share.php?appkey=&title={{encode title}}&amp;url={{url absolute="true"}}"
+                onclick="window.open(this.href, 'weibo-share','width=580,height=296');return false;">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <a class="googleplus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </section>
+    
+        {{#author}}
+        <footer class="post-footer" {{#if cover}} style="background-image: url({{cover}})" {{else}} style="background: #0e9ec2"{{/if}}>
+        {{! Everything inside the #author tags pulls data from the author }}
+            <div class="footer-wrapper">
+
+                {{#if image}}
+                <figure class="author-image wow fadeInUp">
+                    <img src="{{image}}" alt="{{name}}">
+                </figure>
+                {{/if}}
+    
+                <section class="author wow fadeInUp" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <h4><a href="{{url}}" itemprop="name">{{name}}</a></h4>
+    
+                    {{#if bio}}
+                        <p>{{bio}}</p>
+                    {{else}}
+                        <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    {{/if}}
+                    <div class="author-meta wow fadeInUp">
+                        {{#if location}}<i class="fa fa-map-marker"></i> <span class="author-location icon-location">{{location}}</span>{{/if}}
+                        {{#if website}}<i class="fa fa-html5"></i> <span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    </div>
+                </section>
+                
+            </div>
+        </footer>
+        {{/author}}
+    </article>
+
+</main>
+
+{{/post}}
