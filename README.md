@@ -36,7 +36,7 @@ example：
 #### Bug修复
 待续
 
-## 欢迎大家push fix
+## 欢迎大家push fix，有很多不足的地方，请多多指教。
 
 ##此主题基于Kular修改
 
