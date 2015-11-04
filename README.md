@@ -1,4 +1,4 @@
-## Angel-Lite Ghost Theme
+## Angel-Lite Ghost Theme 0.1 Beta
 
 #### Install  
 1. please modify `/post.hbs`   `disqus_shortname = ''` content for your disqus ID  
@@ -16,7 +16,7 @@ example:
 
 [Live Demo](http://www.moecloud.org)
 
-##Angel-Lite主题
+##Angel-Lite主题 0.1 Beta
 
 #### 中文说明
 1. 修改  `/post.hbs` 文件的  `disqus_shortname = ''`  引号内,内容为 你的disqus ID.
