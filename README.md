@@ -1,4 +1,4 @@
-## Angel-Lite Ghost Theme 0.1 Beta
+## Angel-Lite Ghost Theme 0.2 Beta 由于以前的CDN失效,JS也失效，是未完成半工程版
 
 #### Install  
 1. please modify `/post.hbs`   `disqus_shortname = ''` content for your disqus ID  
@@ -8,7 +8,7 @@ example:
 
 ```html
           <!--[if lt IE 9]>
-            <script src="http://frdom.qiniudn.com/cdn/html5.js"></script>  //这是我的CDN，建议更换，滥用流量的话不然我就删除
+            <script src="http://frdom.qiniudn.com/cdn/html5.js"></script>  //这是我的CDN，已经失效
             <script src="http://frdom.qiniudn.com/cdn/selectivizr-min.js"></script>
         <![endif]-->
 ```
