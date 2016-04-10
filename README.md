@@ -1,4 +1,4 @@
-## Angel-Lite Ghost Theme 0.2 Beta 由于以前的CDN失效,JS也失效，是未完成半工程版
+## Angel-Lite Ghost Theme 0.2 正式版
 
 #### Install  
 1. please modify `/post.hbs`   `disqus_shortname = ''` content for your disqus ID  
