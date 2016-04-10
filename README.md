@@ -6,6 +6,7 @@
 3. delete few javascript file and no adaptive menu.
 4. remove CDN links in deafult.md.
 5. improve page response speed.
+
 #### reference
 Change Social Link 
   Replace #0 to your social link (in header.hbs)  
