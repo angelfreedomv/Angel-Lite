@@ -1,20 +1,14 @@
-## Angel-Lite Ghost Theme 0.2 正式版
+## Angel-Lite Ghost Theme 0.2 release
 
 #### Install  
 1. please modify `/post.hbs`   `disqus_shortname = ''` content for your disqus ID  
 2. modify `partials/header.hbs` `partials/menu.hbs` `partials/menu2.hbs` `partials/footer.hbs` links to yours.  
-3. modify javascript CDN in `/deafult.hbs` to your CDN links.
-example:
 
-```html
-          <!--[if lt IE 9]>
-          <script src="{{asset "js/selectivizr-min.js"}}"></script>
-          <script src="{{asset "js/html5.js"}}"></script>
-        <![endif]-->
-```
+### Demo image:
+![1](https://github.com/angelfreedomv/Angel-Lite/tree/master/assets/img/1.png)
+![2](https://github.com/angelfreedomv/Angel-Lite/tree/master/assets/img/2.png)
+![3](https://github.com/angelfreedomv/Angel-Lite/tree/master/assets/img/3.png)
 
-
-[Live Demo](http://www.moecloud.org)
 ## Angel-Lite主题 0.2 Beta
 
 #### 中文说明
@@ -22,9 +16,8 @@ example:
 2. 去掉部分CDN文件。
 3. 提高页面响应速度。
 
-#### 下一步添加min.css框架，需要一些时间。
+#### 下一步添加min.css框架，去掉原有的css,需要一些时间。
 
-## Angel-Lite主题 0.1 Beta
 
 #### 中文说明
 1. 修改  `/post.hbs` 文件的  `disqus_shortname = ''`  引号内,内容为 你的disqus ID.
@@ -46,7 +39,10 @@ js失效 已经修正
 #### 存在已知Bug
 main.js的$不能为read
 ## 欢迎大家push fix，有很多不足的地方，请多多指教。
-
+ 
+### 历史版本
+1. Angel-Lite Ghost Theme 0.1 beta
+ 
 ##此主题基于Kular框架上添加，去掉不能自适应的菜单。
 
 =====
