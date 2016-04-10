@@ -2,8 +2,53 @@
 
 #### Install  
 1. please modify `/post.hbs`   `disqus_shortname = ''` content for your disqus ID  
-2. modify `partials/header.hbs` `partials/menu.hbs` `partials/menu2.hbs` `partials/footer.hbs` links to yours.  
-
+2. modify `partials/header.hbs` `partials/menu2.hbs` `partials/footer.hbs` links to yours.  
+3. delete few javascript file and no adaptive menu.
+4. remove CDN links in deafult.md.
+5. improve page response speed.
+#### reference
+Change Social Link 
+  Replace #0 to your social link (in header.hbs)  
+```html
+ <ul>
+			<!-- inser more links here -->
+			<li class="weibo">
+			    <a href="http://weibo.com/2092860157"><!-- 请修改为自己的url -->
+			        <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                    </span>
+			    </a>
+		    </li>
+		    
+		    <li class="twitter">
+			    <a href="https://twitter.com/moonlikesd">
+			        <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+			    </a>
+		    </li>
+		    
+		    <li class="googleplus">
+			    <a href="https://plus.google.com/u/1/113126898607169220997">
+			        <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                    </span>
+			    </a>
+		    </li>
+		   
+		   <li class="rss">
+			    <a href="http://node.freedom.moe/rss/">
+			        <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                    </span>
+			    </a>
+		    </li>
+	</ul>
+```
 ### Demo image:
 ![1](/assets/img/1.png)
 ![2](/assets/img/2.png)
@@ -19,7 +64,7 @@
 #### 下一步添加min.css框架，去掉原有的css,需要一些时间。
 
 
-#### 中文说明
+####  Angel-Lite Ghost Theme 0.1 beta 中文说明
 1. 修改  `/post.hbs` 文件的  `disqus_shortname = ''`  引号内,内容为 你的disqus ID.
 2. 修改文件 `partials/header.hbs` `partials/menu.hbs` `partials/menu2.hbs` `partials/footer.hbs`的links变为你自己的.
 3. 修改 `/deafult.hbs`里面的javascript CDN，换成你自己的。
