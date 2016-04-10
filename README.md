@@ -5,9 +5,9 @@
 2. modify `partials/header.hbs` `partials/menu.hbs` `partials/menu2.hbs` `partials/footer.hbs` links to yours.  
 
 ### Demo image:
-![1](https://github.com/angelfreedomv/Angel-Lite/tree/master/assets/img/1.png)
-![2](https://github.com/angelfreedomv/Angel-Lite/tree/master/assets/img/2.png)
-![3](https://github.com/angelfreedomv/Angel-Lite/tree/master/assets/img/3.png)
+![1](/assets/img/1.png)
+![2](/assets/img/2.png)
+![3](/assets/img/3.png)
 
 ## Angel-Lite主题 0.2 Beta
 
