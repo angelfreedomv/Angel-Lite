@@ -99,7 +99,7 @@ jQuery(document).ready(function($){
 				navigationContainer.removeClass('is-fixed');
 				mainNavigation.removeClass('has-transitions');
 			}
-		} 
+		}
 	}
 });
 
