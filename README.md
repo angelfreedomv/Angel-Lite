@@ -50,6 +50,16 @@ Change Social Link 
 		    </li>
 	</ul>
 ```
+  you can modify menu link in "menu2.hbs":
+```html
+    <ul>
+	    <li><a href="{{@blog.url}}"><div class="sidebox"><img src="{{asset "img/side_icon02.png"}}">Home</div></a></li>
+		<li><a href="{{@blog.url}}/guidang/"><div class="sidebox"><img src="{{asset "img/side_icon01.png"}}">Archive</div></a></li>
+		<li><a href="javascript:void(0);" ><div class="sidebox"><img src="{{asset "img/side_icon04.png"}}">QQ</div></a></li>
+		<li><a href="javascript:void(0);" ><div class="sidebox"><img src="{{asset "img/side_icon03.png"}}">Weibo</div></a></li>
+		<li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="{{asset "img/side_icon05.png"}}"></a></li>
+	</ul>
+```
 ### Demo image:
 ![1](/assets/img/1.png)
 ![2](/assets/img/2.png)
